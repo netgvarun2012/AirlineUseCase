@@ -37,7 +37,7 @@ On the other hand, Datawarehouses/lakehouses are specifically designed to perfor
 
 Technically, it is possible to perform data analysis directly on an operational database. However, since operational databases are specifcially designed to perform efficient data insertion, updating, and retrieval to support the live operations of a business, it is not a recommended practice.
 
-The reason being, long-running query or such analytical operation on operational database can drastically slow down the application (for e.g. website front-end or CRM application) resulting in poor customer experience. Moreoever, the data in an operational database is constantly changing as new transactions are processed. This can lead to inconsistencies in the data analysis results.
+The reason being, long-running query or any such analytical operation on operational database can drastically slow down the application (for e.g. website front-end or CRM application) resulting in poor customer experience. Moreoever, the data in an operational database is constantly changing as new transactions are processed. This can lead to inconsistencies in the data analysis results.
 
 Instead, often, 3 step process of Extract, Transform and Load (ETL) is performed to load the operational data into a datawarehouse. 
 

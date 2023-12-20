@@ -31,7 +31,19 @@ The final objective is to develop a robust algorithm that takes into account mul
 #### 1.1 Data Extraction
 Before building the ranking model, the first thing to do is to extract the data from the operational database or data warehouse. 
 ##### 1.1.1. What are the primary distinctions between an operational database and a data warehouse/lakehouse? Is it possible to perform data analysis on an operational database?
-<p style="color:blue"><i> Write your answer here </i> </p>
+<p style="color:blue"><i> Answer: Operational database a.k.a transactional databases handle large amount of real-time transactional processing of records. They are specifically designed for **OLTP (Online Transactional Processing)**. An example of such datbase can be Call detail records being stored in near-real-time in a telecom operator's database or retailer storing its inventory information.
+
+On the other hand, Datawarehouses/lakehouses are specifically designed to perform large number of analytical operations. In other words, they are designed for **OLAP (Online Analytical Processing)** workloads. Example includes, Airline or Railway Booking Systems often use data warehouses to store and analyze booking data. Data warehouses are also used to store and process large amounts of relevant healthcare data.
+
+Technically, it is possible to perform data analysis directly on an operational database. However, since operational databases are specifcially designed to perform efficient data insertion, updating, and retrieval to support the live operations of a business, it is not a recommended practice.
+
+The reason being, long-running query or such analytical operation on operational database can drastically slow down the application (for e.g. website front-end or CRM application) resulting in poor customer experience. Moreoever, the data in an operational database is constantly changing as new transactions are processed. This can lead to inconsistencies in the data analysis results.
+
+Instead, often, 3 step process of Extract, Transform and Load (ETL) is performed to load the operational data into a datawarehouse. 
+
+</i> </p>
+
+
 
 ##### 1.1.2. What features will you consider when developing an algorithm to rank hotel inventories?"
 <p style="color:blue"><i> Write your answer here </i> </p>

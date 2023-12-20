@@ -46,10 +46,20 @@ Instead, often, 3 step process of Extract, Transform and Load (ETL) is performed
 
 
 ##### 1.1.2. What features will you consider when developing an algorithm to rank hotel inventories?"
-<p style="color:blue"><i> Write your answer here </i> </p>
+<p style="color:blue"><i> Since, we are missing explicit indicators like actual ratings given by users or even reviews data, We would have to rely on implicit indicators to build a recommendation and ranking system. Some of the features can be:
+  
+1. **NumBookings** : This denotes the total count of bookings received by a hotel over the full span from Mar to Sept.
+2. **TotalRevenue** : This denotes the total revenue collected in USD.
+3. **AvgMonthlyBooking** : The number in this feature indicates the Monthly average number of bookings a hotel has received. For instance, hotel with id '-9213121850607123932' has received total of 5 bookings in last 7 months, so its score is (5/7). While hotel with id '-9206097099752226690' has received 10 bookings in last 7 months, so its score is (10/7)
+4. **AvgWeeklyBooking** : The number in this feature indicates the Weekly average number of bookings a hotel has received. This is quite similar to AvgMonthlyBooking feature.
+5. **hotel_classRounded** : This indicates hotel class i.e. if its 5,4.6,4.5,4,3.5,3,2.5,2,1.5,1
+5. **Latestbookings_count** : This is the count of the number of bookings that a hotel has received in last 2 months. Recent bookings might indicate current popularity or relevance.
+
+Apart from these, other features can be : amenities, star rating,clickThroughRate, views,reviews, sentiments and others
+</i> </p>
 
 ##### 1.1.3. How do you conduct Exploratory Data Analysis (EDA) to validate whether the features support your hypothesis?
-<p style="color:blue"><i> Write your answer here </i> </p>
+<p style="color:blue"><i> I conducted comprehensive EDA by finding a pattern in the number of bookings per hotel. Then explored temporal and seasonal booking trends using time-series chart. Also, analyzed from monetary point of view by dividing given data into multiple dollar value bins/categories and mapping total number of bookings agaist it, Finally also created scatter plot to confirm that the 'length of stay' in the hotel and the 'dollar amount' of booking are positively correlated. Please refer to the notebook q1.3.1.ipynb for code and graphs.  </i> </p>
 
 
 #### 1.2 Data wrangling
@@ -77,6 +87,8 @@ Save your working steps, codes and notes in a `output/q1.3.ipynb`.
 ##### 1.3.2
 What can you do to measure & optimize the model performance? Provide your thoughts.
 > We will be evaluating on your experience/knowledge on ranking/recommendation projects in this subtask.
+
+
 
 <p style="color:blue"><i> Write your answer here </i> </p>
 

@@ -170,9 +170,26 @@ Like previously mentioned, we can be greatly benifited if more features relevant
 #### 1.4 Deployments
 As a data scientist, you might not need to deploy the models on your own as there are other colleagues like MLOps engineer who will help you with that. Nevertheless, you will still need to have a grasp of how the deployment works to facilitate communication with other team so that you do not build a model which is not possible to be deployed.
 Sketch a simple diagram on how the model you build can be deployed to the cloud (AWS/GCP/Azure). 
+
+![IMG_8578](https://github.com/netgvarun2012/AirlineUseCase/assets/93938450/d5c9d03d-a334-400b-8b9b-4affce2615f9)
+
+
 > You will need to include data sources for your model in the diagram.
 > You can design either a batch prediction system (store model results in a database) or just a service based system (for e.g. web services)
 > We will evaluate based on the feasibility of your model and the thoughts behind your design. So you can write down your thoughts on why you choose the infrastructure (For cost saving/higher throughput/higher availability)
+
+In the diagram above, I have shown an **Online Prediction** system as part of which, predictions are generated and returned as soon as the requests for these predictions arrive.
+When doing online prediction, requests are sent to prediction service via RESTful APIs.
+
+In online prediction, both batch features and streaming features can be used. Features computed from historical data (such as data stored in DataWarehouse) are batch features. Whereas, Features computed from streaming data - data in real-time transports- are streaming features.
+
+An example of batch feature used for online prediction, especially session-based recommendations, is item embeddings. Item embeddings are pre-computed in batch and stored in DW and are fetched whenever they are needed for online prediction.
+
+Since hotel availability and prices can change rapidly, and users’ preferences might also change based on various factors like location, time, budget, etc. A web-service-based system can provide real-time recommendations based on the most current data.
+
+Moreover, A web-service-based system can take into account the user’s current context and recent interactions to provide more personalized recommendations.
+
+The choice of deployment design should be guided by the specific requirements of the system, the user experience we want to provide, and the resources available for maintaining the system.
 
 <p style="color:blue"><i> Write your answer here </i> </p>
 

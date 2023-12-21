@@ -88,7 +88,25 @@ Save your working steps, codes and notes in a `output/q1.3.ipynb`.
 What can you do to measure & optimize the model performance? Provide your thoughts.
 > We will be evaluating on your experience/knowledge on ranking/recommendation projects in this subtask.
 
+Since,usually there are multiple recommendation algorithms to choose from, it is imperative to properly evaluate them for their performance.
+Other than that, after building the recommender, we would definitely want to know how good recommender is?
 
+Some of the approaches could be:
+- Accuracy of their predictions : MAE, MSE,RMSE, Precision@K, Recall@K, ROC-AUC curve etc. 
+- Usefulness of recommendations:
+  - Correctness
+  - Non-Obviousness
+  - Diversity
+- Computational performance.
+
+Above measures are more 'model-focused' and consider each recommendation locally. 
+But, the real-world involves considering user-preferences and their behavior.
+So, we can also perform experiments:
+- Evaluation with users:
+  - User Surveys,Polls, Log analysis - I want to know what the user eventually selected and how they relate to recommendations i produced?
+    We might ask users if they find recommendation useful or how often they rely on them. However, creating robust surveys is hard!
+  - A/B testing (Controlled Lab experiments) :  We can give 100 people in each of 2 groups exact same experience except for some variable and we will measure if one of them prefers something or uses something differently than others. 
+    
 
 <p style="color:blue"><i> Write your answer here </i> </p>
 

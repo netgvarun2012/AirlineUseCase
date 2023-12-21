@@ -88,7 +88,7 @@ Save your working steps, codes and notes in a `output/q1.3.ipynb`.
 What can you do to measure & optimize the model performance? Provide your thoughts.
 > We will be evaluating on your experience/knowledge on ranking/recommendation projects in this subtask.
 
-Since,usually there are multiple recommendation algorithms to choose from, it is imperative to properly evaluate them for their performance.
+<p style="color:blue"><i> Since,usually there are multiple recommendation algorithms to choose from, it is imperative to properly evaluate them for their performance.
 Other than that, after building the recommender, we would definitely want to know how good recommender is?
 
 Some of the approaches could be:

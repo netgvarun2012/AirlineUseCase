@@ -135,10 +135,17 @@ We can leverage generative AI to create additional content related to recommende
 
 We can also use generative AI for continuous training and optimization by analyzing and generating insights from user feedback. The model can process user reviews, comments, and feedback to understand sentiment and extract valuable information for refining recommendations.
 
+Previously I have used GEN-AI to create QA bot: https://github.com/netgvarun2012/DocumentAnalyzer
+
+and also, finetuning GenAI to generate tips and recommendations based on emotional state of a person: 
+
+https://github.com/netgvarun2012/VirtualTherapist
+
 </i> </p>
 
 ##### 1.3.4
 If you have the opportunity to acquire additional data and features, which specific data and features do you anticipate obtaining to enhance the ranking model? Furthermore, could you elaborate on how you intend to leverage these additions?
+
 
 <p style="color:blue"><i> Write your answer here </i> </p>
 

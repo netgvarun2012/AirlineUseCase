@@ -107,8 +107,7 @@ So, we can also perform experiments:
     We might ask users if they find recommendation useful or how often they rely on them. However, creating robust surveys is hard!
   - A/B testing (Controlled Lab experiments) :  We can give 100 people in each of 2 groups exact same experience except for some variable and we will measure if one of them prefers something or uses something differently than others. 
     
-
-<p style="color:blue"><i> Write your answer here </i> </p>
+</i> </p>
 
 ##### 1.3.3
 Can you make use of LLM in your model building? If yes, how?

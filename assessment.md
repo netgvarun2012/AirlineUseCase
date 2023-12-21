@@ -151,17 +151,17 @@ If you have the opportunity to acquire additional data and features, which speci
 The current Recommendation system is indeed retrained by the amount of data and features available to us.
 Like previously mentioned, we can be greatly benifited if more features relevant to this usecase can be collected. Such as:
 
-**User Features**: In order to create a robust user profile, user information can be immensely useful. This could include demographic information (like age, gender, or location), behavioral information (like browsing history or click patterns), or any other user attributes that might influence their preferences.
+1. **User Features**: In order to create a robust user profile, user information can be immensely useful. This could include demographic information (like age, gender, or location), behavioral information (like browsing history or click patterns), or any other user attributes that might influence their preferences.
 
-**Hotel Features**: More detailed information about the hotels could also be helpful. This could include amenities (like free WiFi, parking, or breakfast), location details (like proximity to tourist attractions or transportation hubs), room details (like room size or bed type), or ratings and reviews from users.
+2. **Hotel Features**: More detailed information about the hotels could also be helpful. This could include amenities (like free WiFi, parking, or breakfast), location details (like proximity to tourist attractions or transportation hubs), room details (like room size or bed type), or ratings and reviews from users.
 
-**User-Item interaction details**: Additional details about past interactions could be useful. For example, the price paid for past bookings, whether the user left a review or not, or whether the user has booked the same hotel multiple times.
+3. **User-Item interaction details**: Additional details about past interactions could be useful. For example, the price paid for past bookings, whether the user left a review or not, or whether the user has booked the same hotel multiple times.
 
-**Ratings**: User ratings can be used as explicit feedback. For example, if a user consistently rates certain types of hotels highly, these hotels can be prioritized in the recommendations for that user.
+4. **Ratings**: User ratings can be used as explicit feedback. For example, if a user consistently rates certain types of hotels highly, these hotels can be prioritized in the recommendations for that user.
 
-**Review Text**: The text of a review can be analyzed to understand the sentiment of the review, or to extract key topics or features that the user comments on. This can be done using natural language processing (NLP) techniques. For example, if a user often mentions enjoying hotels with good views in their reviews, hotels with good views can be recommended to that user.
+5. **Review Text**: The text of a review can be analyzed to understand the sentiment of the review, or to extract key topics or features that the user comments on. This can be done using natural language processing (NLP) techniques. For example, if a user often mentions enjoying hotels with good views in their reviews, hotels with good views can be recommended to that user.
 
-**Review Volume**: The number of reviews a hotel has received can be an indicator of its popularity, and can be used as a feature in the recommendation algorithm.
+6. **Review Volume**: The number of reviews a hotel has received can be an indicator of its popularity, and can be used as a feature in the recommendation algorithm.
 
 </i> </p>
 
@@ -177,7 +177,7 @@ Sketch a simple diagram on how the model you build can be deployed to the cloud 
 > You will need to include data sources for your model in the diagram.
 > You can design either a batch prediction system (store model results in a database) or just a service based system (for e.g. web services)
 > We will evaluate based on the feasibility of your model and the thoughts behind your design. So you can write down your thoughts on why you choose the infrastructure (For cost saving/higher throughput/higher availability)
-
+<p style="color:blue"><i> 
 In the diagram above, I have shown an **Online Prediction** system as part of which, predictions are generated and returned as soon as the requests for these predictions arrive.
 When doing online prediction, requests are sent to prediction service via RESTful APIs.
 
@@ -191,7 +191,7 @@ Moreover, A web-service-based system can take into account the user’s current 
 
 The choice of deployment design should be guided by the specific requirements of the system, the user experience we want to provide, and the resources available for maintaining the system.
 
-<p style="color:blue"><i> Write your answer here </i> </p>
+</i> </p>
 
 <div style="page-break-after: always; visibility: hidden"> 
 \pagebreak 

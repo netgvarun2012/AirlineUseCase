@@ -52,7 +52,7 @@ Instead, often, 3 step process of Extract, Transform and Load (ETL) is performed
 2. **TotalRevenue** : This denotes the total revenue collected in USD.
 3. **AvgMonthlyBooking** : The number in this feature indicates the Monthly average number of bookings a hotel has received. For instance, hotel with id '-9213121850607123932' has received total of 5 bookings in last 7 months, so its score is (5/7). While hotel with id '-9206097099752226690' has received 10 bookings in last 7 months, so its score is (10/7)
 4. **AvgWeeklyBooking** : The number in this feature indicates the Weekly average number of bookings a hotel has received. This is similar in concept to AvgMonthlyBooking feature.
-5. **hotel_classRounded** : This indicates hotel class i.e. if its 5,4.6,4.5,4,3.5,3,2.5,2,1.5,1
+5. **hotel_class** : This indicates hotel class i.e. if its 5,4.6,4.5,4,3.5,3,2.5,2,1.5,1. (Missing classes were imputed using prediction algorithm). Please see notebok q1.3.1.ipynb
 5. **Latestbookings_count** : This is the count of the number of bookings that a hotel has received in last 2 months. Recent bookings might indicate current popularity or relevance.
 
 Apart from these, other features can be : amenities, star rating,clickThroughRate, views,reviews, sentiments and others

@@ -92,7 +92,8 @@ What can you do to measure & optimize the model performance? Provide your though
 Other than that, after building the recommender, we would definitely want to know how good recommender is?
 
 Some of the approaches could be:
-- Accuracy of their predictions : MAE, MSE,RMSE, Precision@K, Recall@K, ROC-AUC curve etc. 
+- Accuracy of their predictions : Computing MAE(Mean Absolute Error), MSE (Mean Squared Error),RMSE (Root Mean Squared Error), Precision@K, Recall@K, ROC-AUC curve etc.
+  
 - Usefulness of recommendations:
   - Correctness
   - Non-Obviousness

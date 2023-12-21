@@ -152,10 +152,15 @@ The current Recommendation system is indeed retrained by the amount of data and 
 Like previously mentioned, we can be greatly benifited if more features relevant to this usecase can be collected. Such as:
 
 **User Features**: In order to create a robust user profile, user information can be immensely useful. This could include demographic information (like age, gender, or location), behavioral information (like browsing history or click patterns), or any other user attributes that might influence their preferences.
+
 **Hotel Features**: More detailed information about the hotels could also be helpful. This could include amenities (like free WiFi, parking, or breakfast), location details (like proximity to tourist attractions or transportation hubs), room details (like room size or bed type), or ratings and reviews from users.
+
 **User-Item interaction details**: Additional details about past interactions could be useful. For example, the price paid for past bookings, whether the user left a review or not, or whether the user has booked the same hotel multiple times.
+
 **Ratings**: User ratings can be used as explicit feedback. For example, if a user consistently rates certain types of hotels highly, these hotels can be prioritized in the recommendations for that user.
+
 **Review Text**: The text of a review can be analyzed to understand the sentiment of the review, or to extract key topics or features that the user comments on. This can be done using natural language processing (NLP) techniques. For example, if a user often mentions enjoying hotels with good views in their reviews, hotels with good views can be recommended to that user.
+
 **Review Volume**: The number of reviews a hotel has received can be an indicator of its popularity, and can be used as a feature in the recommendation algorithm.
 
 </i> </p>

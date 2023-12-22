@@ -435,25 +435,32 @@ Prepare your slide in `output/q3.1.3.pptx`
 - [ ] Data regularization is used to reduce the complexity of a model.
 - [ ] Data regularization can help to prevent overfitting.
 - [ ] Data regularization techniques include Ridge regression and Lasso regression.
-- [ ] All of the above.
+- [x] All of the above.
 
 #### 4.3 What is the difference between parametric and non-parametric statistics?
 
-- [ ] Parametric statistics assume that the data follows a specific distribution, while non-parametric statistics do not make any assumptions about the distribution of the data.
+- [x] Parametric statistics assume that the data follows a specific distribution, while non-parametric statistics do not make any assumptions about the distribution of the data.
 - [ ] Non-parametric statistics are more powerful than parametric statistics, but they are also more sensitive to violations of assumptions.
-- [ ] Non-parametric statistics are more robust to outliers than parametric statistics.
-- [ ] Non-parametric statistics requires large sample size to be valid
+- [x] Non-parametric statistics are more robust to outliers than parametric statistics.
+- [x] Non-parametric statistics requires large sample size to be valid
 
 #### 4.4 Among the following identify the one in which dimensionality reduction reduces.
 
-- [ ] Collinearity
+- [x] Collinearity
 - [ ] Information Gain
-- [ ] Data Complexity
+- [x] Data Complexity
 - [ ] Entropy
 
 
 #### 4.5  What is the difference between bagging and boosting? Write down your opinion below.
-<p style="color:blue"><i> Write your answer here </i> </p>
+<p style="color:blue"><i> 
+
+| Bagging      | Boosting |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+</i> </p>
 
 See more in *[appendix.md](./appendix.md)*
 ## The End

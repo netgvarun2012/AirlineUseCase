@@ -256,7 +256,7 @@ S2 = c2 + dP2 - Q21 P1
 
 The positive sign for coefficient 'd' indicates a direct or positive relationship between the price of a product and the quantity that suppliers are willing to produce and sell. This is consistent with the general expectation in economics: as the price of a good or service increases, suppliers are often willing to supply more of that good or service to the market, all else being equal.
 
-Since the primary goal of dynamic pricing is to optimize revenue by setting prices that reflect changing market dynamics and consumer behavior, We need to define an objective function
+Since the primary goal of dynamic pricing is to optimize revenue by setting prices that reflect changing market dynamics and consumer behavior, We need to define an objective function.
 
 The objective function is formulated to maximize the revenue, which is represented by the sum of the products of prices and the minimum of demand and supply for two products:
 
@@ -270,11 +270,11 @@ The decision variables are the prices for the two products:
 Constraints involve the relationships between demand, supply, and pricing for each product.
 
 For Product 1:
-           ``` S1 = c1 + d1P1 - Q12P2
+           ``` S1 = c1 + d1P1 - Q12P2 
                D1 = a1 - b1P1```
               
 For Product 2:
-         ```   S2 = c2 + d2P2 - Q21P1
+         ```   S2 = c2 + d2P2 - Q21P1 
                D2 = a2 - b2P2```
 
 For solving such optimization problem, **Gurobi** is a popular commercial  solver known for its efficiency and performance. 

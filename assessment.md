@@ -233,7 +233,7 @@ In more technical terms, the Goal of surge pricing is to find the ‘equilibrium
 **On demand side:**
 - Demand at location ‘i’ :
 ```
-    - Di ⇒ ai - bi pi
+    Di ⇒ ai - bi pi
 ```
 Here, the variable 'p' typically represents the price of the product or service, and 'D' represents the quantity demanded.
 In this specific model, the negative sign in front of ‘b’ indicates an inverse relationship between price and quantity demanded. This is consistent with the law of demand, which states that, all else being equal, as the price of a good or service increases, the quantity demanded decreases, and vice versa.

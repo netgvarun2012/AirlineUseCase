@@ -358,16 +358,25 @@ RL has been famously used in game-playing scenarios, such as the success of Alph
 
 ##### 2.2.3 If there are 4 algorithms/solutions developed by different data scientists, how can you design a fair experiment to compare the algorithms? Assume the product team has the capability to run the experiment you want
 
-<p style="color:blue"><i> In such a case, we would have to devise a fair experiment to compare 4 different algorithms developed by data scientists and it will require careful consideration to ensure unbiased results and valuable insights.  
+<p style="color:blue"><i> 
+  In such a case, we would have to devise a fair experiment to compare 4 different algorithms developed by data scientists and it will require careful consideration to ensure unbiased results and valuable insights.  
+  
 - First step would be to clearly dedine the goal of the experiment. These can be done by asking questions like : are we trying to identify the algorithm with the highest accuracy, best recall, or lowest processing time?
+  
 - Then, We need to choose appropriate metrics to quantify the performance of each algorithm based on the objective. Ensure the metrics are well-defined, objective, and relevant to the business problem.
+  
 - All algorithms should be tested on the same dataset. This ensures that any differences in performance are due to the algorithms themselves and not variations in the data.
+  
 - Implement blinding. This means that individuals involved in the experiment, such as data scientists, analysts, or evaluators, are unaware of which algorithm corresponds to which solution. This minimizes bias.
+  
 - Ensure that your results are statistically significant. Use appropriate statistical tests to assess the significance of observed differences between algorithms.
+  
 - Document the experiment design, methodology, and any decisions made throughout the process.
+  
 - Consider factors like:
   - Deploying the chosen algorithm in production. Factors like computational cost, infrastructure requirements, and maintainability should be taken into account.
-  - Interpretablity - allowing one to understand why they make certain predictions,
+  - Interpretablity - allowing one to understand why they make certain predictions.
+    
 - Communicate the experiment design and progress with the product team and relevant stakeholders
 </i> </p>
 

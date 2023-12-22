@@ -262,11 +262,12 @@ The decision variables are the prices for the two products:
 
 **Constraints**:
 Constraints involve the relationships between demand, supply, and pricing for each product.
+
 For Product 1:
            ``` S1 = c1 + d1P1 - Q12P2
                D1 = a1 - b1P1```
               
-For Product 1:
+For Product 2:
          ```   S2 = c2 + d2P2 - Q21P1
                D2 = a2 - b2P2```
 

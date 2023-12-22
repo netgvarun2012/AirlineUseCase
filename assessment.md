@@ -290,7 +290,7 @@ predicted_prices_cityA = reg_model_cityA.predict(new_data_cityA)
 predicted_prices_cityB = reg_model_cityB.predict(new_data_cityB)
 ```
 
-# Integrate predicted prices into optimization model for each city
+### Integrate predicted prices into optimization model for each city
 ```
 model.setObjective(predicted_prices_cityA[0] * min(D1, S1) + predicted_prices_cityA[1] * min(D2, S2) +
                    predicted_prices_cityB[0] * min(D1, S1) + predicted_prices_cityB[1] * min(D2, S2), sense=GRB.MAXIMIZE)
@@ -341,24 +341,35 @@ RL has been famously used in game-playing scenarios, such as the success of Alph
 
 <p style="color:blue"><i> When it comes ot metrics, usually, model centric classification/regression metrics comes to mind. However, it is important to also consider business objective build metrics around it.
 
-1. **Profit Maximization**: Since one of the primary goals of the pricing model is to maximize profit, one can measure the total profit before and after implementing the model1.
-
-2. **Sales Volume**: Dynamic pricing models can help increase sales volume by adjusting prices in response to changes in market demand1. Therefore, tracking changes in sales volume can be a useful metric.
-
-3. **Customer Satisfaction**: Dynamic pricing can improve customer satisfaction by providing consumers with prices that are more in line with their perceived value of a service1. One could measure this through customer surveys or by tracking repeat business.
-
-4. **Market Share**: If one of the objectives of your dynamic pricing model is to outbid competitors and get a larger share of the market2, then market share could be a relevant metric.
-
-5. **Accuracy Metrics**: Depending on the machine learning techniques used, one might also consider standard predictive accuracy metrics such as Percent Correct Classification (PCC) or confusion matrix4.
-
-6, **A/B Test Results**: If applicable, one can measure the impact of different pricing strategies using A/B testing.
+  1. **Profit Maximization**: Since one of the primary goals of the pricing model is to maximize profit, one can measure the total profit before and after implementing the model1.
+  
+  2. **Sales Volume**: Dynamic pricing models can help increase sales volume by adjusting prices in response to changes in market demand1. Therefore, tracking changes in sales volume can be a useful metric.
+  
+  3. **Customer Satisfaction**: Dynamic pricing can improve customer satisfaction by providing consumers with prices that are more in line with their perceived value of a service1. One could measure this through customer surveys or by tracking repeat business.
+  
+  4. **Market Share**: If one of the objectives of your dynamic pricing model is to outbid competitors and get a larger share of the market2, then market share could be a relevant metric.
+  
+  5. **Accuracy Metrics**: Depending on the machine learning techniques used, one might also consider standard predictive accuracy metrics such as Percent Correct Classification (PCC) or confusion matrix4.
+  
+  6, **A/B Test Results**: If applicable, one can measure the impact of different pricing strategies using A/B testing.
 
 </i> </p>
 
 
 ##### 2.2.3 If there are 4 algorithms/solutions developed by different data scientists, how can you design a fair experiment to compare the algorithms? Assume the product team has the capability to run the experiment you want
 
-<p style="color:blue"><i> Write your answer here </i> </p>
+<p style="color:blue"><i> In such a case, we would have to devise a fair experiment to compare 4 different algorithms developed by data scientists and it will require careful consideration to ensure unbiased results and valuable insights.  
+- First step would be to clearly dedine the goal of the experiment. These can be done by asking questions like : are we trying to identify the algorithm with the highest accuracy, best recall, or lowest processing time?
+- Then, We need to choose appropriate metrics to quantify the performance of each algorithm based on the objective. Ensure the metrics are well-defined, objective, and relevant to the business problem.
+- All algorithms should be tested on the same dataset. This ensures that any differences in performance are due to the algorithms themselves and not variations in the data.
+- Implement blinding. This means that individuals involved in the experiment, such as data scientists, analysts, or evaluators, are unaware of which algorithm corresponds to which solution. This minimizes bias.
+- Ensure that your results are statistically significant. Use appropriate statistical tests to assess the significance of observed differences between algorithms.
+- Document the experiment design, methodology, and any decisions made throughout the process.
+- Consider factors like:
+  - Deploying the chosen algorithm in production. Factors like computational cost, infrastructure requirements, and maintainability should be taken into account.
+  - Interpretablity - allowing one to understand why they make certain predictions,
+- Communicate the experiment design and progress with the product team and relevant stakeholders
+</i> </p>
 
 <div style="page-break-after: always; visibility: hidden"> 
 \pagebreak 

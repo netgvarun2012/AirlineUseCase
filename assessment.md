@@ -455,11 +455,15 @@ Prepare your slide in `output/q3.1.3.pptx`
 #### 4.5  What is the difference between bagging and boosting? Write down your opinion below.
 <p style="color:blue"><i> 
 
-| Bagging      | Boosting |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-
+| Bagging                                            | Boosting                                     |
+| ---------------------------------------------------| -------------------------------------------- |
+| 1. This involves training many Indeoendently grow  | 1. This involves training many sequentially  |
+| trees in parallel.                                 | grown trees.                                 |
+| 2. This involves training strong learners(low bias)| 2. This involves trainsing weak learners     |
+| e.g. deep decision trees.                          | (high bias) e.g. shallow decision trees.     |
+| 3. This reduces Variance.                          | 3. This reduces bias.                        |
+| 4. This handles over-fitting                       | 4. This handles Underfitting                 |
+| 5. More trees doesn’t hurt                         | 5. Too many trees leads to over-fitting!     |
 </i> </p>
 
 See more in *[appendix.md](./appendix.md)*

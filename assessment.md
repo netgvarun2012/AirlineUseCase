@@ -216,6 +216,81 @@ Dynamic pricing is one of the challenge we have in airasia Ride. We have multipl
 Share us your thoughts on how you will design the pricing system.
 Write down/sketch your thoughts on how you will design the algorithm and how it can be deployed.
 
+Dynamic pricing is a broad strategy that involves adjusting prices in real-time based on various factors, such as demand, supply, competitor pricing, and other market conditions.
+
+Let's take an example use-case of Uber!
+
+_During periods of excessive demand or scarce supply i.e. when there are far more riders than drivers Uber increases its normal fares with a multiplier whose value depends upon the scarcity of available drivers._
+
+Concepts from good old Microeconomics is used to calculate the market price for riders and drivers alike.
+
+In more technical terms, the Goal of surge pricing is to find the ‘equilibrium price’ at which driver supply matches rider demand and rider’s wait time is minimized. This is because Uber can not afford to have a scenario when demand > supply at crunch times in major cities!
+
+**Modelling**:
+- Suppose there are ‘n’ locations.
+
+**On demand side:**
+- Demand at location ‘i’ :
+    - Di ⇒ ai - bi pi
+Here, the variable 'p' typically represents the price of the product or service, and 'D' represents the quantity demanded.
+In this specific model, the negative sign in front of ‘b’ indicates an inverse relationship between price and quantity demanded. This is consistent with the law of demand, which states that, all else being equal, as the price of a good or service increases, the quantity demanded decreases, and vice versa.
+
+Below formulation is a demonstration for 2 locations:
+
+**On supply side:**
+When building a supply model, one has to take into account the relationship between 2 locations:
+
+**S1 = c1 + dP1 - Q12 P2** (When price at say Clementi (Singapore) goes up, supply at NUS goes down, so negative relationship).
+**S2 = c2 + dP2 - Q21P1**
+
+Since the primary goal of dynamic pricing is to optimize revenue by setting prices that reflect changing market dynamics and consumer behavior, We need to define an objective function
+
+The objective function is formulated to maximize the revenue, which is represented by the sum of the products of prices and the minimum of demand and supply for two products:
+
+              _maximize P1 . min(D1,S1) + P2 . min(D2,S2)_
+              
+**Decision Variable**:
+The decision variables are the prices for the two products:
+          _P1, P2 >=0_
+
+**Constraints**:
+Constraints involve the relationships between demand, supply, and pricing for each product.
+For Product 1:
+            _S1 = c1 + d1P1 - Q12P2_
+              _D1 = a1 - b1P1_
+              
+For Product 1:
+            _S2 = c2 + d2P2 - Q21P1_
+              _D2 = a2 - b2P2_
+
+For solving such optimization problem, **Gurobi** is a popular commercial  solver known for its efficiency and performance. 
+Other options include **IBM CPLEX, SciPy Optimization, Pyomo**.
+
+In terms of machine learning, we can integrate this dynamic pricing optimization with a trained MachineLearning Model which can enhance the model's ability to adapt to complex, non-linear relationships, and changing market conditions.
+
+- For that , We need to gather historical data on prices, demand, and other relevant factors.
+- Identify relevant features that can influence pricing decisions. These may include demand drivers, seasonality, competitor prices, and any other factors that impact your pricing strategy.
+- Model selection : Regression model, time-series model, reinforcement model cam worl out well.
+- Train the model.
+- Validation and deployment.
+
+We can develop separate pricing models or parameters for each city. This involves training machine learning models independently for each city or adjusting coefficients in your optimization model based on city-specific characteristics.
+
+# Assuming the city-specific regression models are 'reg_model_cityA' and 'reg_model_cityB'
+_predicted_prices_cityA = reg_model_cityA.predict(new_data_cityA)
+predicted_prices_cityB = reg_model_cityB.predict(new_data_cityB)_
+
+# Integrate predicted prices into optimization model for each city
+model.setObjective(predicted_prices_cityA[0] * min(D1, S1) + predicted_prices_cityA[1] * min(D2, S2) +
+                   predicted_prices_cityB[0] * min(D1, S1) + predicted_prices_cityB[1] * min(D2, S2), sense=GRB.MAXIMIZE)
+
+
+In terms of deployment, We can Choose a platform for deploying the pricing model. This could be a cloud platform like AWS, Azure, or Google Cloud, or an on-premises server. Cloud platforms often provide convenient services for deploying and managing machine learning models. We can expose our model through an API (Application Programming Interface) so that other systems or applications can make requests to our pricing model. This enables real-time communication between your pricing model and the systems that need pricing decisions.
+
+We can also think of implementing A/B testing to evaluate the performance of the dynamic pricing system. Test different pricing strategies on a subset of users to gather insights into the impact of changes before deploying them broadly.
+
+For comprehensive deployment strategy, please take a look at the deployment sketch above section 1.4
+
 <p style="color:blue"><i> Write your answer here </i> </p>
 
 #### 2.2 

@@ -339,7 +339,21 @@ RL has been famously used in game-playing scenarios, such as the success of Alph
 
 ##### 2.2.2 In this case, what will be the ultimate metrics we can use to evaluate the performance of the pricing models?
 
-<p style="color:blue"><i> Write your answer here </i> </p>
+<p style="color:blue"><i> When it comes ot metrics, usually, model centric classification/regression metrics comes to mind. However, it is important to also consider business objective build metrics around it.
+
+1. **Profit Maximization**: Since one of the primary goals of the pricing model is to maximize profit, one can measure the total profit before and after implementing the model1.
+
+2. **Sales Volume**: Dynamic pricing models can help increase sales volume by adjusting prices in response to changes in market demand1. Therefore, tracking changes in sales volume can be a useful metric.
+
+3. **Customer Satisfaction**: Dynamic pricing can improve customer satisfaction by providing consumers with prices that are more in line with their perceived value of a service1. One could measure this through customer surveys or by tracking repeat business.
+
+4. **Market Share**: If one of the objectives of your dynamic pricing model is to outbid competitors and get a larger share of the market2, then market share could be a relevant metric.
+
+5. **Accuracy Metrics**: Depending on the machine learning techniques used, one might also consider standard predictive accuracy metrics such as Percent Correct Classification (PCC) or confusion matrix4.
+
+6, **A/B Test Results**: If applicable, one can measure the impact of different pricing strategies using A/B testing.
+
+</i> </p>
 
 
 ##### 2.2.3 If there are 4 algorithms/solutions developed by different data scientists, how can you design a fair experiment to compare the algorithms? Assume the product team has the capability to run the experiment you want

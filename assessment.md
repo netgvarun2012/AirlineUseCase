@@ -216,6 +216,7 @@ Dynamic pricing is one of the challenge we have in airasia Ride. We have multipl
 Share us your thoughts on how you will design the pricing system.
 Write down/sketch your thoughts on how you will design the algorithm and how it can be deployed.
 
+<p style="color:blue"><i>
 Dynamic pricing is a broad strategy that involves adjusting prices in real-time based on various factors, such as demand, supply, competitor pricing, and other market conditions.
 
 Let's take an example use-case of Uber!
@@ -291,7 +292,7 @@ We can also think of implementing A/B testing to evaluate the performance of the
 
 For comprehensive deployment strategy, please take a look at the deployment sketch above section 1.4
 
-<p style="color:blue"><i> Write your answer here </i> </p>
+</i> </p>
 
 #### 2.2 
 ##### 2.2.1 What is reinforcement learning? Can you give few examples of reinforcement learning?

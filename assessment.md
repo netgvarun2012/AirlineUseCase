@@ -455,9 +455,28 @@ Prepare your slide in `output/q3.1.3.pptx`
 #### 4.5  What is the difference between bagging and boosting? Write down your opinion below.
 <p style="color:blue"><i> 
 
+Techniques of bagging and boosting have originated from Decision Trees. Decision trees are fast to train, and can have low bias but high variance
+
+### BAGGING (e.g. Random Forest) 
+To train, fix some number T, then:
+• Bootstrap T times, then train T decision trees, one on each bootstrap
+
+- We can further reduce variance by reducing the correlation between the trees.
+
+- Random Forest does this correlation by :
+  - For each tree (trained on each bootstrapped sample),every time we choose a split, we only allow splits along some random subset of m features.
+ 
+### BOOSTING (e.g. AdaBoost - Adaptive Boosting)
+We are boosting our weak models by adapting to the samples we got wrong. 
+Gradient Boosting generalizes AdaBoost by allowing different loss functions (original ADABOOST has exponential loss function).
+
+The key contribution of boosting is that it provides a way of training and combining weak learners to turn them into a single strong learner.
+
+Some key differences are listed below:
+
 | Bagging                                            | Boosting                                     |
 | ---------------------------------------------------| -------------------------------------------- |
-| 1. This involves training many Indeoendently grow  | 1. This involves training many sequentially  |
+| 1. This involves training many Indeoendently grown | 1. This involves training many sequentially  |
 | trees in parallel.                                 | grown trees.                                 |
 | 2. This involves training strong learners(low bias)| 2. This involves trainsing weak learners     |
 | e.g. deep decision trees.                          | (high bias) e.g. shallow decision trees.     |

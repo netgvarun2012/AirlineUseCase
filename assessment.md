@@ -178,7 +178,7 @@ Sketch a simple diagram on how the model you build can be deployed to the cloud 
 > You can design either a batch prediction system (store model results in a database) or just a service based system (for e.g. web services)
 > We will evaluate based on the feasibility of your model and the thoughts behind your design. So you can write down your thoughts on why you choose the infrastructure (For cost saving/higher throughput/higher availability)
 <p style="color:blue"><i> 
-In the diagram above, I have shown an **Online Prediction** system as part of which, predictions are generated and returned as soon as the requests for these predictions arrive.
+In the diagram above, I have shown an **Online Prediction**__ system as part of which, predictions are generated and returned as soon as the requests for these predictions arrive.
 When doing online prediction, requests are sent to prediction service via RESTful APIs.
 
 In online prediction, both batch features and streaming features can be used. Features computed from historical data (such as data stored in DataWarehouse) are batch features. Whereas, Features computed from streaming data - data in real-time transports- are streaming features.

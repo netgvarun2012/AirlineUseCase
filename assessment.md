@@ -307,7 +307,35 @@ For comprehensive deployment strategy, please take a look at the deployment sket
 #### 2.2 
 ##### 2.2.1 What is reinforcement learning? Can you give few examples of reinforcement learning?
 
-<p style="color:blue"><i> Write your answer here </i> </p>
+<p style="color:blue"><i> 
+
+Reinforcement learning involves an Agent which has a complete view of the situation within which it is called the STATE. 
+Agent also has a partial view of the state which is given to it as input from the environment at each timestep. 
+This is known as an observation. Agent interacts with the environment and takes an action. It gets a reward or a penalty as a result of taking that action.
+
+The goal of reinforcement learning then is to learn a policy function that maps states to action in such a way that cumulative reward is maximized.
+
+More formally:
+
+- Sequential interaction of an agent with its environment. ​​
+- At each time step _t_, the agent observes RL environment of internal state _St_ and retrieves observation _Ot_. ​​
+- Executes the action at resulting from its RL policy _π(at |ht)_ where ht is the RL agent history and receives a reward rt as consequence of its action.​​
+- Policies are designed as a function that maps states to actions and maximizes an optimality criterion.​
+- Directly depends on the immediate rewards _rt_ observed over a certain time horizon.​
+
+I have previously worked on **Re-inforcement learning** for stock trading use case. More specifically:
+
+"_To create a stock timing model, spontaneously find the best trading opportunity to complete the trading and strive for the lowest overall trading cost of the stock._"
+
+I have written a medium article on it previously:
+https://medium.com/@sharmavarun.cs/deep-reinforcement-learning-for-stock-trading-90c6f63d3439 
+
+Github Repo:
+https://github.com/netgvarun2012/StockTradingDRL
+
+Apart from Stock Trading example above, Reinforcement learning has been used as RLHF models (Reinforcment Learning with Human Feedback) to correct LLMs that behave badly for e.g. exhibiting toxic language, aggressive responses, dangerous information. 
+RL has been famously used in game-playing scenarios, such as the success of AlphaGo, also to train self-driving cars to navigate complex environments, in robotics to teach robots how to perform tasks such as grasping objects, manipulating tools,
+</i> </p>
 
 ##### 2.2.2 In this case, what will be the ultimate metrics we can use to evaluate the performance of the pricing models?
 

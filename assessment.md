@@ -284,9 +284,11 @@ In terms of machine learning, we can integrate this dynamic pricing optimization
 
 We can develop separate pricing models or parameters for each city. This involves training machine learning models independently for each city or adjusting coefficients in your optimization model based on city-specific characteristics.
 
-# Assuming the city-specific regression models are 'reg_model_cityA' and 'reg_model_cityB'
-_predicted_prices_cityA = reg_model_cityA.predict(new_data_cityA)
-predicted_prices_cityB = reg_model_cityB.predict(new_data_cityB)_
+Assuming the city-specific regression models are 'reg_model_cityA' and 'reg_model_cityB'
+```
+predicted_prices_cityA = reg_model_cityA.predict(new_data_cityA)
+predicted_prices_cityB = reg_model_cityB.predict(new_data_cityB)
+```
 
 # Integrate predicted prices into optimization model for each city
 ```

@@ -232,7 +232,9 @@ In more technical terms, the Goal of surge pricing is to find the ‘equilibrium
 
 **On demand side:**
 - Demand at location ‘i’ :
+```
     - Di ⇒ ai - bi pi
+```
 Here, the variable 'p' typically represents the price of the product or service, and 'D' represents the quantity demanded.
 In this specific model, the negative sign in front of ‘b’ indicates an inverse relationship between price and quantity demanded. This is consistent with the law of demand, which states that, all else being equal, as the price of a good or service increases, the quantity demanded decreases, and vice versa.
 
@@ -241,8 +243,10 @@ Below formulation is a demonstration for 2 locations:
 **On supply side:**
 - When building a supply model, one has to take into account the relationship between 2 locations:
 
+```
 **S1 = c1 + dP1 - Q12 P2** (When price at say Clementi (Singapore) goes up, supply at NUS goes down, so negative relationship).
 **S2 = c2 + dP2 - Q21 P1**
+```
 
 The positive sign for coefficient 'd' indicates a direct or positive relationship between the price of a product and the quantity that suppliers are willing to produce and sell. This is consistent with the general expectation in economics: as the price of a good or service increases, suppliers are often willing to supply more of that good or service to the market, all else being equal.
 
@@ -250,21 +254,21 @@ Since the primary goal of dynamic pricing is to optimize revenue by setting pric
 
 The objective function is formulated to maximize the revenue, which is represented by the sum of the products of prices and the minimum of demand and supply for two products:
 
-              _maximize P1 . min(D1,S1) + P2 . min(D2,S2)_
+              _maximize (P1 . min(D1,S1) + P2 . min(D2,S2) )_
               
 **Decision Variable**:
 The decision variables are the prices for the two products:
-          _P1, P2 >=0_
+        ```  _P1, P2 >=0_ ```
 
 **Constraints**:
 Constraints involve the relationships between demand, supply, and pricing for each product.
 For Product 1:
-            _S1 = c1 + d1P1 - Q12P2_
-              _D1 = a1 - b1P1_
+           ``` _S1 = c1 + d1P1 - Q12P2_
+              _D1 = a1 - b1P1_```
               
 For Product 1:
-            _S2 = c2 + d2P2 - Q21P1_
-              _D2 = a2 - b2P2_
+         ```   _S2 = c2 + d2P2 - Q21P1_
+              _D2 = a2 - b2P2_```
 
 For solving such optimization problem, **Gurobi** is a popular commercial  solver known for its efficiency and performance. 
 Other options include **IBM CPLEX, SciPy Optimization, Pyomo**.
@@ -284,9 +288,10 @@ _predicted_prices_cityA = reg_model_cityA.predict(new_data_cityA)
 predicted_prices_cityB = reg_model_cityB.predict(new_data_cityB)_
 
 # Integrate predicted prices into optimization model for each city
+```
 model.setObjective(predicted_prices_cityA[0] * min(D1, S1) + predicted_prices_cityA[1] * min(D2, S2) +
                    predicted_prices_cityB[0] * min(D1, S1) + predicted_prices_cityB[1] * min(D2, S2), sense=GRB.MAXIMIZE)
-
+```
 
 In terms of deployment, We can Choose a platform for deploying the pricing model. This could be a cloud platform like AWS, Azure, or Google Cloud, or an on-premises server. Cloud platforms often provide convenient services for deploying and managing machine learning models. We can expose our model through an API (Application Programming Interface) so that other systems or applications can make requests to our pricing model. This enables real-time communication between your pricing model and the systems that need pricing decisions.
 

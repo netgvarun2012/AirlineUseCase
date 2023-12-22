@@ -425,9 +425,9 @@ Prepare your slide in `output/q3.1.3.pptx`
 
 #### 4.1 What is the difference between bias and variance?
 
-- [ ] Bias is the error that occurs when a model consistently underestimates or overestimates the true value.
+- [x] Bias is the error that occurs when a model consistently underestimates or overestimates the true value.
 - [ ] Variance is the error that occurs when a model makes different predictions for the same input data.
-- [ ] A model with high bias is underfitting, while a model with high variance is overfitting.
+- [x] A model with high bias is underfitting, while a model with high variance is overfitting.
 - [ ] All of the above.
 
 #### 4.2 What is the purpose of data regularization?

@@ -239,10 +239,12 @@ In this specific model, the negative sign in front of ‘b’ indicates an inver
 Below formulation is a demonstration for 2 locations:
 
 **On supply side:**
-When building a supply model, one has to take into account the relationship between 2 locations:
+- When building a supply model, one has to take into account the relationship between 2 locations:
 
 **S1 = c1 + dP1 - Q12 P2** (When price at say Clementi (Singapore) goes up, supply at NUS goes down, so negative relationship).
 **S2 = c2 + dP2 - Q21P1**
+
+The positive sign indicates a direct or positive relationship between the price of a product and the quantity that suppliers are willing to produce and sell. This is consistent with the general expectation in economics: as the price of a good or service increases, suppliers are often willing to supply more of that good or service to the market, all else being equal.
 
 Since the primary goal of dynamic pricing is to optimize revenue by setting prices that reflect changing market dynamics and consumer behavior, We need to define an objective function
 

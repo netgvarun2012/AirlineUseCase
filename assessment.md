@@ -65,6 +65,7 @@ Apart from these, other features can be : amenities, star rating,clickThroughRat
 </i> </p>
 
 ##### 1.1.3. How do you conduct Exploratory Data Analysis (EDA) to validate whether the features support your hypothesis?
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i>
 I conducted comprehensive EDA by finding a pattern in the number of bookings per hotel. Then explored temporal and seasonal booking trends using time-series chart. Also, analyzed from monetary point of view by dividing given data into multiple dollar value bins/categories and mapping total number of bookings agaist it, Finally also created scatter plot to confirm that the 'length of stay' in the hotel and the 'dollar amount' of booking are positively correlated. Please refer to the notebook q1.3.1.ipynb for code and graphs.  </i> </p>
@@ -95,6 +96,7 @@ Save your working steps, codes and notes in a `output/q1.3.ipynb`.
 ##### 1.3.2
 What can you do to measure & optimize the model performance? Provide your thoughts.
 > We will be evaluating on your experience/knowledge on ranking/recommendation projects in this subtask.
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
 Since,usually there are multiple recommendation algorithms to choose from, it is imperative to properly evaluate them for their performance.
@@ -122,6 +124,7 @@ So, we can also perform experiments:
 ##### 1.3.3
 Can you make use of LLM in your model building? If yes, how?
 > We will be evaluating your creativity and LLM knowledge in this subtask
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)
 <p style="color:blue"><i>  
 
@@ -189,6 +192,7 @@ Sketch a simple diagram on how the model you build can be deployed to the cloud 
 > You will need to include data sources for your model in the diagram.
 > You can design either a batch prediction system (store model results in a database) or just a service based system (for e.g. web services)
 > We will evaluate based on the feasibility of your model and the thoughts behind your design. So you can write down your thoughts on why you choose the infrastructure (For cost saving/higher throughput/higher availability)
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
 In the diagram above, I have shown an 'Online Prediction' system as part of which, predictions are generated and returned as soon as the requests for these predictions arrive.
@@ -234,6 +238,7 @@ Dynamic pricing is one of the challenge we have in airasia Ride. We have multipl
 #### 2.1.Solution Design
 Share us your thoughts on how you will design the pricing system.
 Write down/sketch your thoughts on how you will design the algorithm and how it can be deployed.
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i>
 
@@ -324,6 +329,7 @@ For comprehensive deployment strategy, please take a look at the deployment sket
 
 #### 2.2 
 ##### 2.2.1 What is reinforcement learning? Can you give few examples of reinforcement learning?
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
 
@@ -356,6 +362,7 @@ RL has been famously used in game-playing scenarios, such as the success of Alph
 </i> </p>
 
 ##### 2.2.2 In this case, what will be the ultimate metrics we can use to evaluate the performance of the pricing models?
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> When it comes ot metrics, usually, model centric classification/regression metrics comes to mind. However, it is important to also consider business objective build metrics around it.
 
@@ -375,6 +382,7 @@ RL has been famously used in game-playing scenarios, such as the success of Alph
 
 
 ##### 2.2.3 If there are 4 algorithms/solutions developed by different data scientists, how can you design a fair experiment to compare the algorithms? Assume the product team has the capability to run the experiment you want
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
   In such a case, we would have to devise a fair experiment to compare 4 different algorithms developed by data scientists and it will require careful consideration to ensure unbiased results and valuable insights.  
@@ -467,6 +475,7 @@ Prepare your slide in `output/q3.1.3.pptx`
 
 
 #### 4.5  What is the difference between bagging and boosting? Write down your opinion below.
+
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
 

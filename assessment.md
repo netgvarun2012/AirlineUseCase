@@ -32,7 +32,7 @@ The final objective is to develop a robust algorithm that takes into account mul
 Before building the ranking model, the first thing to do is to extract the data from the operational database or data warehouse. 
 ##### 1.1.1. What are the primary distinctions between an operational database and a data warehouse/lakehouse? Is it possible to perform data analysis on an operational database?
 
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 
 <span style="color: blue;"><i> Answer: Operational database a.k.a transactional databases handle large amount of real-time transactional processing of records. They are specifically designed for OLTP (Online Transactional Processing). An example of such datbase can be Call detail records being stored in near-real-time in a telecom operator's database or retailer storing its inventory information.
 
@@ -48,7 +48,7 @@ Instead, often, 3 step process of Extract, Transform and Load (ETL) is performed
 
 
 ##### 1.1.2. What features will you consider when developing an algorithm to rank hotel inventories?"
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 
 <p style="color:blue"><i> 
 
@@ -65,7 +65,8 @@ Apart from these, other features can be : amenities, star rating,clickThroughRat
 </i> </p>
 
 ##### 1.1.3. How do you conduct Exploratory Data Analysis (EDA) to validate whether the features support your hypothesis?
-<p style="color:blue"><i>- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+<p style="color:blue"><i>
 I conducted comprehensive EDA by finding a pattern in the number of bookings per hotel. Then explored temporal and seasonal booking trends using time-series chart. Also, analyzed from monetary point of view by dividing given data into multiple dollar value bins/categories and mapping total number of bookings agaist it, Finally also created scatter plot to confirm that the 'length of stay' in the hotel and the 'dollar amount' of booking are positively correlated. Please refer to the notebook q1.3.1.ipynb for code and graphs.  </i> </p>
 
 
@@ -94,8 +95,8 @@ Save your working steps, codes and notes in a `output/q1.3.ipynb`.
 ##### 1.3.2
 What can you do to measure & optimize the model performance? Provide your thoughts.
 > We will be evaluating on your experience/knowledge on ranking/recommendation projects in this subtask.
-
-<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+<p style="color:blue"><i> 
 Since,usually there are multiple recommendation algorithms to choose from, it is imperative to properly evaluate them for their performance.
 Other than that, after building the recommender, we would definitely want to know how good recommender is?
 
@@ -121,8 +122,8 @@ So, we can also perform experiments:
 ##### 1.3.3
 Can you make use of LLM in your model building? If yes, how?
 > We will be evaluating your creativity and LLM knowledge in this subtask
-
-<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)
+<p style="color:blue"><i>  
 
 LLMs are suitable for dealing with textual data. In this context, LLM can certainly be useful in enriching the user and item profiles. For instance, many times, user's leave a short review/feedback on hotels after their trip. Such information can be used by a language model to understand the sentiment of the review or to extract certain topics or entities from the review. 
 
@@ -156,8 +157,8 @@ https://github.com/netgvarun2012/VirtualTherapist
 ##### 1.3.4
 If you have the opportunity to acquire additional data and features, which specific data and features do you anticipate obtaining to enhance the ranking model? Furthermore, could you elaborate on how you intend to leverage these additions?
 
-
-<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+<p style="color:blue"><i> 
 
 The current Recommendation system is indeed retrained by the amount of data and features available to us.
 Like previously mentioned, we can be greatly benifited if more features relevant to this usecase can be collected. Such as:
@@ -188,8 +189,8 @@ Sketch a simple diagram on how the model you build can be deployed to the cloud 
 > You will need to include data sources for your model in the diagram.
 > You can design either a batch prediction system (store model results in a database) or just a service based system (for e.g. web services)
 > We will evaluate based on the feasibility of your model and the thoughts behind your design. So you can write down your thoughts on why you choose the infrastructure (For cost saving/higher throughput/higher availability)
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 In the diagram above, I have shown an 'Online Prediction' system as part of which, predictions are generated and returned as soon as the requests for these predictions arrive.
 When doing online prediction, requests are sent to prediction service via RESTful APIs.
 
@@ -233,9 +234,8 @@ Dynamic pricing is one of the challenge we have in airasia Ride. We have multipl
 #### 2.1.Solution Design
 Share us your thoughts on how you will design the pricing system.
 Write down/sketch your thoughts on how you will design the algorithm and how it can be deployed.
-
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i>
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 
 Dynamic pricing is a broad strategy that involves adjusting prices in real-time based on various factors, such as demand, supply, competitor pricing, and other market conditions.
 
@@ -324,7 +324,7 @@ For comprehensive deployment strategy, please take a look at the deployment sket
 
 #### 2.2 
 ##### 2.2.1 What is reinforcement learning? Can you give few examples of reinforcement learning?
-
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
 
 Reinforcement learning involves an Agent which has a complete view of the situation within which it is called the STATE. 
@@ -356,7 +356,7 @@ RL has been famously used in game-playing scenarios, such as the success of Alph
 </i> </p>
 
 ##### 2.2.2 In this case, what will be the ultimate metrics we can use to evaluate the performance of the pricing models?
-
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> When it comes ot metrics, usually, model centric classification/regression metrics comes to mind. However, it is important to also consider business objective build metrics around it.
 
   1. **Profit Maximization**: Since one of the primary goals of the pricing model is to maximize profit, one can measure the total profit before and after implementing the model1.
@@ -375,7 +375,7 @@ RL has been famously used in game-playing scenarios, such as the success of Alph
 
 
 ##### 2.2.3 If there are 4 algorithms/solutions developed by different data scientists, how can you design a fair experiment to compare the algorithms? Assume the product team has the capability to run the experiment you want
-
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
   In such a case, we would have to devise a fair experiment to compare 4 different algorithms developed by data scientists and it will require careful consideration to ensure unbiased results and valuable insights.  
   
@@ -467,6 +467,7 @@ Prepare your slide in `output/q3.1.3.pptx`
 
 
 #### 4.5  What is the difference between bagging and boosting? Write down your opinion below.
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 <p style="color:blue"><i> 
 
 Techniques of bagging and boosting have originated from Decision Trees. Decision trees are fast to train, and can have low bias but high variance

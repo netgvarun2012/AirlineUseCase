@@ -48,7 +48,9 @@ Instead, often, 3 step process of Extract, Transform and Load (ETL) is performed
 
 
 ##### 1.1.2. What features will you consider when developing an algorithm to rank hotel inventories?"
-<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+
+<p style="color:blue"><i> 
 
 Since, we are missing explicit indicators like actual ratings given by users or even reviews data, We would have to rely on implicit indicators to build a recommendation and ranking system. Some of the features can be:
   

@@ -33,7 +33,7 @@ Before building the ranking model, the first thing to do is to extract the data 
 ##### 1.1.1. What are the primary distinctions between an operational database and a data warehouse/lakehouse? Is it possible to perform data analysis on an operational database?
 
 - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
-`
+
 <span style="color: blue;"><i> Answer: Operational database a.k.a transactional databases handle large amount of real-time transactional processing of records. They are specifically designed for OLTP (Online Transactional Processing). An example of such datbase can be Call detail records being stored in near-real-time in a telecom operator's database or retailer storing its inventory information.
 
 On the other hand, Datawarehouses/lakehouses are specifically designed to perform large number of analytical operations. In other words, they are designed for **OLAP (Online Analytical Processing)** workloads. Example includes, Airline or Railway Booking Systems often use data warehouses to store and analyze booking data. Data warehouses are also used to store and process large amounts of relevant healthcare data.
@@ -45,10 +45,12 @@ The reason being, long-running query or any such analytical operation on operati
 Instead, often, 3 step process of Extract, Transform and Load (ETL) is performed to load the operational data into a datawarehouse. 
 
 </i> </span>
-`
+
 
 ##### 1.1.2. What features will you consider when developing an algorithm to rank hotel inventories?"
-<p style="color:blue"><i> Since, we are missing explicit indicators like actual ratings given by users or even reviews data, We would have to rely on implicit indicators to build a recommendation and ranking system. Some of the features can be:
+<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+
+Since, we are missing explicit indicators like actual ratings given by users or even reviews data, We would have to rely on implicit indicators to build a recommendation and ranking system. Some of the features can be:
   
 1. **NumBookings** : This denotes the total count of bookings received by a hotel over the full span from Mar to Sept.
 2. **TotalRevenue** : This denotes the total revenue collected in USD.
@@ -61,7 +63,8 @@ Apart from these, other features can be : amenities, star rating,clickThroughRat
 </i> </p>
 
 ##### 1.1.3. How do you conduct Exploratory Data Analysis (EDA) to validate whether the features support your hypothesis?
-<p style="color:blue"><i> I conducted comprehensive EDA by finding a pattern in the number of bookings per hotel. Then explored temporal and seasonal booking trends using time-series chart. Also, analyzed from monetary point of view by dividing given data into multiple dollar value bins/categories and mapping total number of bookings agaist it, Finally also created scatter plot to confirm that the 'length of stay' in the hotel and the 'dollar amount' of booking are positively correlated. Please refer to the notebook q1.3.1.ipynb for code and graphs.  </i> </p>
+<p style="color:blue"><i>- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+I conducted comprehensive EDA by finding a pattern in the number of bookings per hotel. Then explored temporal and seasonal booking trends using time-series chart. Also, analyzed from monetary point of view by dividing given data into multiple dollar value bins/categories and mapping total number of bookings agaist it, Finally also created scatter plot to confirm that the 'length of stay' in the hotel and the 'dollar amount' of booking are positively correlated. Please refer to the notebook q1.3.1.ipynb for code and graphs.  </i> </p>
 
 
 #### 1.2 Data wrangling
@@ -90,7 +93,8 @@ Save your working steps, codes and notes in a `output/q1.3.ipynb`.
 What can you do to measure & optimize the model performance? Provide your thoughts.
 > We will be evaluating on your experience/knowledge on ranking/recommendation projects in this subtask.
 
-<p style="color:blue"><i> Since,usually there are multiple recommendation algorithms to choose from, it is imperative to properly evaluate them for their performance.
+<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+Since,usually there are multiple recommendation algorithms to choose from, it is imperative to properly evaluate them for their performance.
 Other than that, after building the recommender, we would definitely want to know how good recommender is?
 
 Some of the approaches could be:
@@ -116,7 +120,9 @@ So, we can also perform experiments:
 Can you make use of LLM in your model building? If yes, how?
 > We will be evaluating your creativity and LLM knowledge in this subtask
 
-<p style="color:blue"><i> LLMs are suitable for dealing with textual data. In this context, LLM can certainly be useful in enriching the user and item profiles. For instance, many times, user's leave a short review/feedback on hotels after their trip. Such information can be used by a language model to understand the sentiment of the review or to extract certain topics or entities from the review. 
+<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+
+LLMs are suitable for dealing with textual data. In this context, LLM can certainly be useful in enriching the user and item profiles. For instance, many times, user's leave a short review/feedback on hotels after their trip. Such information can be used by a language model to understand the sentiment of the review or to extract certain topics or entities from the review. 
 
 More specifcially, sentiment analysis can be implemented to extract users’ attitude towards hotels as part of the input for the recommendation system. 
 
@@ -149,7 +155,8 @@ https://github.com/netgvarun2012/VirtualTherapist
 If you have the opportunity to acquire additional data and features, which specific data and features do you anticipate obtaining to enhance the ranking model? Furthermore, could you elaborate on how you intend to leverage these additions?
 
 
-<p style="color:blue"><i> 
+<p style="color:blue"><i> - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+
 The current Recommendation system is indeed retrained by the amount of data and features available to us.
 Like previously mentioned, we can be greatly benifited if more features relevant to this usecase can be collected. Such as:
 
@@ -180,6 +187,7 @@ Sketch a simple diagram on how the model you build can be deployed to the cloud 
 > You can design either a batch prediction system (store model results in a database) or just a service based system (for e.g. web services)
 > We will evaluate based on the feasibility of your model and the thoughts behind your design. So you can write down your thoughts on why you choose the infrastructure (For cost saving/higher throughput/higher availability)
 <p style="color:blue"><i> 
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
 In the diagram above, I have shown an 'Online Prediction' system as part of which, predictions are generated and returned as soon as the requests for these predictions arrive.
 When doing online prediction, requests are sent to prediction service via RESTful APIs.
 
@@ -225,6 +233,8 @@ Share us your thoughts on how you will design the pricing system.
 Write down/sketch your thoughts on how you will design the algorithm and how it can be deployed.
 
 <p style="color:blue"><i>
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 
+
 Dynamic pricing is a broad strategy that involves adjusting prices in real-time based on various factors, such as demand, supply, competitor pricing, and other market conditions.
 
 Let's take an example use-case of Uber!
